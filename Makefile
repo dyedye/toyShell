@@ -1,9 +1,9 @@
 CXX=g++
 
-SRCS=main.cpp
+SRCS=main.cpp pathResolver.cpp utils.cpp
+OPTS=-std=c++17 #-DDEBUG
 OBJS=$(SRCS:%.cpp=%.o)
 TARGET=shell
-#OPTS=-DDEBUG
 
 all: $(TARGET)
 %.o: %.cpp
@@ -13,7 +13,7 @@ $(TARGET): $(OBJS)
 	$(CXX) $(OBJS) $(OPTS) -o $@
 
 test: $(TARGET)
-	./$(TARGET)
+	./$(TARGET) 
 
 clean:
 	rm -f $(OBJS) $(TARGET)
