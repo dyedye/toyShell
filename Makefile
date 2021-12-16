@@ -3,7 +3,7 @@ CXX=g++
 SRCS=main.cpp
 OBJS=$(SRCS:%.cpp=%.o)
 TARGET=shell
-OPTS=-DDEBUG
+#OPTS=-DDEBUG
 
 all: $(TARGET)
 %.o: %.cpp
